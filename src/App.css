@@ -1,3 +1,7 @@
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,136 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.WebCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+    object-fit: cover;
+
+}
+
+.imgGallery {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+}
+
+.line {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  height: 5px;
+  width: 0%;
+  background-color: white;
+  box-shadow: 1px 1px 20px black;
+  animation: fillLine 10.8s linear forwards;
+  z-index: 400;
+}
+
+@keyframes fillLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 98%;
+  }
+}
+
+.modalCont{
+  position: absolute;
+  backdrop-filter: blur(10px);
+  background-color: rgb(40, 44, 52, 30%);
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: .5s all ease-in-out;
+
+}
+
+.tittleCont{
+ position: relative;
+ bottom: 5rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.modalTittle {
+  font-family: 'Cairo';
+  margin: 0.5rem;
+  font-size: 2rem;
+  padding: 0.25rem 1rem;
+  color: white;
+  background-color: rgb(255, 255, 255, 40%);
+  border-radius: 5px;
+  width: fit-content;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  border: none;
+
+}
+
+.modalTittle:hover {
+  background-color: rgb(255, 255, 255, 90%);
+  color: #282c34;
+
+}
+
+.siguienteButton {
+  width: 10%;
+  position: absolute;
+  right: 0;
+  background: none;
+  opacity: 0%;
+  border: none;
+  color: white;
+  transition: 0.5s all ease-in-out;
+ cursor: pointer;
+ font-family: 'Cairo';
+ z-index: 300;
+}
+
+.siguienteButton:hover {
+  backdrop-filter: blur(3px);
+  background-color: rgba(34, 153, 190, 0.1);
+  opacity: 100%;
+
+}
+
+.atrasButton {
+  width: 10%;
+  position: absolute;
+  left: 0;
+  background: none;
+  opacity: 0%;
+  border: none;
+  color: white;
+  transition: 0.5s all ease-in-out;
+ cursor: pointer;
+ font-family: 'Cairo';
+ z-index: 600;
+}
+
+.atrasButton:hover {
+  backdrop-filter: blur(3px);
+  background-color: rgba(190, 195, 32, 0.1);
+  opacity: 100%;
+
 }
