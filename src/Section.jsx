@@ -1,22 +1,29 @@
 import React from 'react'
 
-export default function Section({img, siguiente, atras, tittle, text}) {
+export default function Section({ img, siguiente, atras, tittle, text }) {
     return (
-        <div className='gallery'>
-            <div class="line"  style={{ "width": "0%" }} key={Math.random()}></div>
-            <img className='imgGallery' src={img} alt="" />
-            <p className='modalTittle'>  {tittle} </p>
-            <p> {text} </p>
+        <>
+             <div className='textscont'>
+                <p className='modalTittle'>  {tittle} </p>
+                <p className='parrafo'> {text} </p>
+            </div>
 
 
-            <button className='siguienteButton' style={{ "height": window.screen.height}}>
-                Siguiente historia
-            </button>
+            <div className='gallery'>
+                <div class="line" style={{ "width": "0%" }} key={Math.random()}></div>
+                <img className='imgGallery' src={img} alt="" />
 
-            <button className='atrasButton' style={{ "height": window.screen.height}}>
-                Atrás
-            </button>
 
-        </div>
+   
+                <button onClick={siguiente}  className='siguienteButton' style={{ "height": window.screen.height }}>
+                    Siguiente historia
+                </button>
+
+                <button onClick={atras} className='atrasButton' style={{ "height": window.screen.height }}>
+                    Atrás
+                </button>
+
+            </div>
+        </>
     )
 }
