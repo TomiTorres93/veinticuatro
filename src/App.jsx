@@ -112,9 +112,30 @@ function App() {
                 <img className='imgGallery' src={imgZero} alt="" />
 
             </div>
+            
         </div>
-      :section === 1 ?
-        <Section openMod={openMod} section={section} stay={stay} siguiente={siguiente} tras={anterior} img={img1} tittle="1979" text1="Por las denuncias sobre violaciones a los derechos humanos la Comisión Interamericana de DDHH llega a la Argentina. La dictadura responde con una campaña de prensa bajo la consigna “Los argentinos somos derechos y humanos”." text2="Debido a la crisis económica las y los trabajadores organizan huelgas y otras medidas de fuerza y empieza a recomponerse el movimiento obrero. En septiembre se creó la Central Única de Trabajadores Argentinos." text3="Las Abuelas de Plaza de Mayo restituyeron la identidad de los primeros nietos, Anatole y Victoria, hijos de Victoria Lucía Grisonas y Mario Roger Julien, desaparecidos en 1976."  />
+      :section === 1 ? 
+        <Section openMod={openMod} section={section} stay={stay} siguiente={siguiente} tras={anterior} img={img1} tittle="1979" 
+        
+        text1="Por las denuncias sobre violaciones a los derechos humanos la Comisión Interamericana de DDHH llega a la Argentina -click para más info sobre la CIDH-. La dictadura responde con una campaña de prensa bajo la consigna “Los argentinos somos derechos y humanos”."
+        
+        link1="https://carasycaretas.org.ar/2019/08/27/la-cidh-en-la-argentina/"
+
+        
+        text2="Debido a la crisis económica las y los trabajadores organizan huelgas y otras medidas de fuerza y empieza a recomponerse el movimiento obrero. En septiembre se creó la Central Única de Trabajadores Argentinos. Haciendo click acá encontrarás más información sobre la huelga en Alpargatas." 
+
+        link2="https://drive.google.com/file/d/1waTE4sgms8rYSBQtCpoVo-22fSAggBAR/view"
+
+        pic="https://raw.githubusercontent.com/TomiTorres93/veinticuatro/main/src/images/alpargatas.png"
+        
+        
+        text3="Las Abuelas de Plaza de Mayo restituyeron la identidad de los primeros nietos, Anatole y Victoria, hijos de Victoria Lucía Grisonas y Mario Roger Julien, desaparecidos en 1976."  
+        
+        link3={null}
+        />
+
+        
+
       : section === 2 ?
         <Section openMod={openMod} section={section} stay={stay}  siguiente={siguiente} atras={anterior} img={img2} tittle="1977"  text1="Por las denuncias sobre violaciones a los derechos humanos la Comisión Interamericana de DDHH llega a la Argentina. La dictadura responde con una campaña de prensa bajo la consigna “Los argentinos somos derechos y humanos”." text2="Debido a la crisis económica las y los trabajadores organizan huelgas y otras medidas de fuerza y empieza a recomponerse el movimiento obrero. En septiembre se creó la Central Única de Trabajadores Argentinos." text3="Las Abuelas de Plaza de Mayo restituyeron la identidad de los primeros nietos, Anatole y Victoria, hijos de Victoria Lucía Grisonas y Mario Roger Julien, desaparecidos en 1976."  />
       :  section === 3 ?

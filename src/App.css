@@ -27,7 +27,6 @@ body {
   width: 100%;
   height: 100%;
     object-fit: cover;
-
 }
 
 .imgGallery {
@@ -117,9 +116,9 @@ body {
 
 .modalTittle {
   font-family: 'Cairo';
-  margin: 0.5rem;
+  margin: 0rem;
   font-size: 4rem;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.5rem;
   font-weight: bolder;
   color: white;
   border-radius: 5px;
@@ -174,9 +173,9 @@ body {
 
 }
 
-.textscont {
+.textAndPicCont {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   background-color: rgba(0, 0, 0, 0.5);
@@ -186,10 +185,20 @@ body {
   top: 2rem;
   margin: 0 auto;
   width: 90%;
+  padding: 0.5rem;
   height: 90%;
-  padding: 1rem;
+  
   opacity: 0%;
   transition: 1s all ease-in-out;
+}
+
+.textscont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
 }
 
 .opacity100 {
@@ -210,8 +219,15 @@ body {
 .parrafo {
   font-family: 'Open Sans';
   text-align: center;
-  padding: 0.5rem 25%;
+  padding: 0.5rem 10%;
+  margin: 0;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s all ease-in-out;
 }
+
+
 
 .parrafoZero {
   font-family: 'Open Sans';
@@ -250,9 +266,30 @@ body {
   height: fit-content;
   position: absolute;
   bottom: 2rem;
-
+  opacity: 50%;
 }
 
+
+
+.picStyle {
+  width: fit-content;
+  height: 90%;
+  object-fit: cover;
+  margin: 0rem 0.5rem;
+}
+
+.texthover {
+  cursor: pointer;
+  color: white;
+}
+
+.texthover:hover {
+  color: rgb(124, 182, 199);
+}
+
+.w70 {
+  width: 70%;
+}
 
 /* MEDIA QUERY */
 
@@ -271,6 +308,15 @@ body {
 
 @media only screen and (min-width: 100px) and  (max-width: 600px) {
 
+  body {
+    overflow:auto; /* Hide scrollbars */
+    overflow-x: hidden; /* Hide scrollbars */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .none-mobile {
       display: none !important;
   }
@@ -281,7 +327,7 @@ body {
   
   .modalTittle {
 
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 0.25rem 0.5rem;
 
   
@@ -295,7 +341,7 @@ body {
 
   
 .siguienteButton {
-  width: 30%;
+  width: 20%;
 }
 
 .siguienteButton:hover {
@@ -303,16 +349,16 @@ body {
 }
 
 .atrasButton {
-  width: 30%;
+  width: 20%;
 }
 
 .atrasButton:hover {
-  opacity: 00%;
+  opacity: 0%;
 }
 
 .parrafo {
+  font-size: 0.9rem;
 
-  padding: 0.5rem 1rem;
 }
 
 .parrafoZero {
@@ -322,9 +368,37 @@ body {
 
 
 .textscont {
-
+  
   width: 85%;
 
 }
-  
+
+
+.textAndPicCont {
+
+  flex-direction: column;
+  height: 95%;
+width: 95%;
+padding: 0rem;
+margin: 0;
+}
+
+
+.w70 {
+  width: 90%;
+}
+
+.picStyle {
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  height: 30%;
+  object-fit: cover;
+  margin: 0rem;
+  position: relative;
+  bottom: 4rem;
+  border-radius: 5px;
+  z-index: 600;
+}
+
 }
