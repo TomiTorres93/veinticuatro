@@ -1,45 +1,15 @@
 body {
   overflow: hidden; /* Hide scrollbars */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 
 .WebCont {
@@ -75,7 +45,7 @@ body {
   width: 0%;
   background-color: white;
   box-shadow: 1px 1px 20px black;
-  animation: fillLine 30.8s linear forwards;
+  animation: fillLine 10.8s linear forwards;
   z-index: 500;
 }
 
@@ -110,13 +80,27 @@ body {
  justify-content: center;
 }
 
-.modalTittle {
+.tittle {
   font-family: 'Cairo';
   margin: 0.5rem;
   font-size: 2rem;
   padding: 0.25rem 1rem;
   color: white;
-  background-color: rgb(255, 255, 255, 40%);
+  width: fit-content;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  border: none;
+}
+
+
+.optionTittle {
+  font-family: 'Cairo';
+  margin: 0.5rem;
+  font-size: 2rem;
+  padding: 0.25rem 1rem;
+  font-weight: bolder;
+  background-color: #282c34;
+  color: white;
   border-radius: 5px;
   width: fit-content;
   cursor: pointer;
@@ -125,11 +109,28 @@ body {
 
 }
 
-.modalTittle:hover {
+.optionTittle:hover {
   background-color: rgb(255, 255, 255, 90%);
   color: #282c34;
 
 }
+
+.modalTittle {
+  font-family: 'Cairo';
+  margin: 0.5rem;
+  font-size: 4rem;
+  padding: 0.25rem 1rem;
+  font-weight: bolder;
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  border: none;
+
+}
+
+
 
 .siguienteButton {
   width: 10%;
@@ -168,7 +169,7 @@ body {
 
 .atrasButton:hover {
   backdrop-filter: blur(3px);
-  background-color: rgba(190, 195, 32, 0.1);
+  background-color: rgba(34, 153, 190, 0.1);
   opacity: 100%;
 
 }
@@ -177,26 +178,81 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: 'Cairo';
+  justify-content: flex-start;
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   border-radius: 5px;
   position: absolute;
   top: 2rem;
   margin: 0 auto;
-  width: 50%;
+  width: 90%;
+  height: 90%;
+  padding: 1rem;
+  opacity: 0%;
+  transition: 1s all ease-in-out;
+}
 
+.opacity100 {
+  opacity: 100%;
+  transition: 1s all ease-in-out;
 }
 
 .sectionZeroCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
   color: white;
   background-color: #282c34;
 }
 
 .parrafo {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
+  text-align: center;
+  padding: 0.5rem 25%;
 }
+
+.parrafoZero {
+  font-family: 'Open Sans';
+  text-align: center;
+  padding: 0.5rem 25%;
+}
+
+.zindex1000{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  transition: 1s all ease-in-out;
+}
+
+.logoEduc {
+  width: 10rem;
+  height: fit-content;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+}
+
+.logoEducPlacas {
+  width: 10rem;
+  height: fit-content;
+  position: absolute;
+  bottom: 2rem;
+
+}
+
 
 /* MEDIA QUERY */
 
@@ -227,5 +283,23 @@ body {
 
   
   }
+
+  
+.siguienteButton {
+  width: 30%;
+}
+
+.siguienteButton:hover {
+  opacity: 0%;
+}
+
+.atrasButton {
+  width: 30%;
+}
+
+.atrasButton:hover {
+  opacity: 00%;
+}
+
   
 }

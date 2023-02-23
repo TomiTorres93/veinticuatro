@@ -1,12 +1,51 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 
-export default function Section({ img, siguiente, atras, tittle, text }) {
+export default function Section({ img, siguiente, atras, tittle, text1, text2, text3, section, stay, openMod }) {
+
+    const timerRef = useRef(null);
+    const timerRef2 = useRef(null);
+
+    const [textsNone, setTextsNone] = useState(true)
+
+    const openModF = () => {
+        openMod()
+    }
+    useEffect(() => {
+      clearTimeout(timerRef.current);
+  
+      timerRef.current = setTimeout(() => {
+        openModF()
+        setTextsNone(true)
+      }, 11000);
+  
+      return () => clearTimeout(timerRef.current);
+    }, [section, stay]);
+
+    useEffect(() => {
+        clearTimeout(timerRef2.current);
+    
+        timerRef2.current = setTimeout(() => {
+            setTextsNone(false)
+        }, 100);
+    
+        return () => clearTimeout(timerRef2.current);
+    }, [section, stay]);
+
+
+
     return (
         <>
-             <div className='textscont'>
-                <p className='modalTittle'>  {tittle} </p>
-                <p className='parrafo'> {text} </p>
-            </div>
+
+        
+        <div className={textsNone === true ? "textscont" :   "textscont opacity100"  }>
+        <p className='modalTittle'>  {tittle} </p>
+        <p className='parrafo'> {text1} </p>
+        <p className='parrafo'> {text2} </p>
+        <p className='parrafo'> {text3} </p>
+        <img className='logoEducPlacas' src="https://educacionymemoria.github.io/Prevencion-del-Maltrato-Infanto-Juvenil/images/logo-edym-fullblanco.png" alt="" />
+    </div>
+
+   
 
 
             <div className='gallery'>
