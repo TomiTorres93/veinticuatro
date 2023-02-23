@@ -275,13 +275,22 @@ body {
       display: none !important;
   }
 
-
+.tittle {
+  line-height: 2rem;
+}
+  
   .modalTittle {
 
     font-size: 1.2rem;
     padding: 0.25rem 0.5rem;
 
   
+  }
+
+  .optionTittle {
+    font-size: 1.2rem;
+    padding: 0.25rem 1rem;
+
   }
 
   
@@ -301,5 +310,21 @@ body {
   opacity: 00%;
 }
 
+.parrafo {
+
+  padding: 0.5rem 1rem;
+}
+
+.parrafoZero {
+
+  padding: 0.5rem 1rem;
+}
+
+
+.textscont {
+
+  width: 85%;
+
+}
   
 }
