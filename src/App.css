@@ -1,9 +1,14 @@
+
+
 body {
-  overflow: hidden; /* Hide scrollbars */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -21,12 +26,17 @@ body {
   color: white;
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 .gallery {
   width: 100%;
   height: 100%;
     object-fit: cover;
+    background-color: #191919;
+opacity: 0.2;
+background-image: radial-gradient(#ffffff 0.75px, #191919 0.75px);
+background-size: 15px 15px;
 }
 
 .imgGallery {
@@ -105,7 +115,8 @@ body {
   cursor: pointer;
   transition: .5s all ease-in-out;
   border: none;
-
+z-index: 1000;
+text-decoration: none;
 }
 
 .optionTittle:hover {
@@ -192,14 +203,6 @@ body {
   transition: 1s all ease-in-out;
 }
 
-.textscont {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-}
 
 .opacity100 {
   opacity: 100%;
@@ -240,16 +243,20 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0);
   text-align: center;
   border-radius: 5px;
   position: absolute;
-  backdrop-filter: blur(10px);
+
   top: 0;
   margin: 0 auto;
   width: 100%;
   height: 100%;
   transition: 1s all ease-in-out;
+}
+
+.zindex10002{
+z-index: 1000;
 }
 
 .logoEduc {
@@ -289,6 +296,565 @@ body {
 
 .w70 {
   width: 70%;
+}
+
+
+/* LINEA DE TIEMPO CARDS */
+
+.lineaItemCont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.textsCont{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(59, 59, 59, 20%);
+  border-radius: 15px;
+  padding: 3rem;
+}
+
+.columnaLineaTexts {
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40vw;
+  margin: 0 2rem;
+
+  padding: 2rem;
+}
+
+.lineaItemTittle {
+   font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: white;
+  border-radius: 5px;
+  line-height: 1.7rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  border: none;
+  text-transform: uppercase;
+}
+
+.lineaFecha {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 10vh;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: bolder;
+  color: #191919;
+  background-color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0rem 1rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+
+}
+
+.lineaFecha2 {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 10vh;
+  right: 13%;
+  font-weight: bolder;
+  color: #191919;
+  background-color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0rem 1rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+
+}
+
+.lineaFecha3 {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 10vh;
+  left: 13%;
+  font-weight: bolder;
+  color: #191919;
+  background-color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0rem 1rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+}
+
+
+
+.lineaItemSubTittle {
+  font-family: 'Open Sans';
+  position: absolute;
+  top: 18vh;
+  left: 47.2%;
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s all ease-in-out;
+}
+
+.lineaItemText {
+    font-family: 'Open Sans';
+
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s all ease-in-out;
+}
+
+.lineaLínea {
+  margin: 0 2rem;
+  height: 100vh;
+  width: 0.1rem;
+  background-color: white;
+}
+
+.lineImg {
+  width: 15vw;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.lineainicio {
+  width: 0.1rem;
+  margin: 0;
+  background-color: white;
+  height: 30vh;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.linea1 {
+  width: 0.1rem;
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  position: absolute;
+  left: 20%;
+  top: 0;
+}
+
+.linea1primero {
+  width: 0.1rem;
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+
+
+.linea2 {
+  margin: 0;
+  background-color: white;
+  height: 0.1rem;
+  width: 30vw;
+  position: absolute;
+  left: 20%;
+  top: 5vh;
+}
+
+.linea3 {
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  width: 0.1rem;
+  position: absolute;
+  left: 50vw;
+  top: 5vh;
+}
+
+.linea4 {
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  width: 0.1rem;
+  position: absolute;
+  right: 20vw;
+  bottom: 5vh;
+}
+
+.linea5 {
+  margin: 0;
+  background-color: white;
+  height: 0.1rem;
+  width: 30vw;
+  position: absolute;
+  right: 20vw;
+  bottom: 5vh;
+}
+
+.linea6 {
+  width: 0.1rem;
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  position: absolute;
+  right: 20vw;
+  bottom: 0;
+}
+
+.linea1b {
+  width: 0.1rem;
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  position: absolute;
+  right: 20vw;
+  top: 0;
+}
+
+
+.linea2b {
+  margin: 0;
+  background-color: white;
+  height: 0.1rem;
+  width: 30vw;
+  position: absolute;
+  right: 20vw;
+  top: 5vh;
+}
+
+.linea3b {
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  width: 0.1rem;
+  position: absolute;
+  right: 50vw;
+  top: 5vh;
+}
+
+.linea4b {
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  width: 0.1rem;
+  position: absolute;
+  left: 20vw;
+  bottom: 5vh;
+}
+
+.linea6b {
+  width: 0.1rem;
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  position: absolute;
+  left: 20vw;
+  bottom: 0;
+}
+
+
+.linea4c {
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  width: 0.1rem;
+  position: absolute;
+  left: 50vw;
+  bottom: 5vh;
+}
+
+.linea5c {
+  margin: 0;
+  background-color: white;
+  height: 0.1rem;
+  width: 30vw;
+  position: absolute;
+  left: 20vw;
+  bottom: 5vh;
+}
+
+.linea6c {
+  width: 0.1rem;
+  margin: 0;
+  background-color: white;
+  height: 5vh;
+  position: absolute;
+  right: 20vw;
+  bottom: 0;
+}
+
+.buttonLeerMás {
+  font-family: 'Cairo';
+  margin: 0 2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #191919;
+  background-color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+}
+
+.volver1 {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 0.8rem;
+  position: absolute;
+  font-weight: bolder;
+  color: #191919;
+  background-color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+  left: 20%;
+  top: 8vh;
+
+}
+
+.volver1primero {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 0.8rem;
+  position: absolute;
+  font-weight: bolder;
+  color: #191919;
+  background-color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+  left: 10%;
+  top: 1vh;
+  z-index: 1000;
+
+}
+
+.openLineButton {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 0.8rem;
+  position: absolute;
+  font-weight: bolder;
+  color: white;
+  border: solid 2px white;
+  background: none;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+  right: 15%;
+  top: 3vh;
+  z-index: 1000;
+
+}
+
+.openLineButton:hover {
+  background-color: white;
+  color: #282c34;
+}
+
+.openLineButtonInv {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 0.8rem;
+  position: absolute;
+  font-weight: bolder;
+  color: #282c34;
+  border: solid 2px #282c34;
+  background: none;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+  right: 15%;
+  top: 3vh;
+  z-index: 1000;
+
+}
+
+.openLineButtonInv:hover {
+  background-color:  #282c34;
+  color: white;
+}
+
+
+
+
+.openLineButton2 {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 0.8rem;
+  position: absolute;
+  font-weight: bolder;
+  color: white;
+  border: solid 2px white;
+  background: none;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+  left: 15%;
+  top: 3vh;
+  z-index: 1000;
+
+}
+.openLineButton2:hover {
+  background-color: white;
+  color: #282c34;
+}
+
+.openLineButtonPrimera {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 0.8rem;
+  position: absolute;
+  font-weight: bolder;
+  color: white;
+  border: solid 2px white;
+  background: none;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+  left: 18%;
+  top: 1vh;
+  z-index: 1000;
+
+}
+
+.openLineButtonPrimera:hover {
+  background-color: white;
+  color: #282c34;
+}
+
+
+
+.volver2 {
+  font-family: 'Cairo';
+  margin: 0rem;
+  font-size: 0.8rem;
+  position: absolute;
+  font-weight: bolder;
+  color: #191919;
+  background-color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+  right: 20%;
+  top: 8vh;
+
+}
+
+.todalalinea {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  background-color: rgb(255, 255, 255);
+
+
+}
+
+
+.todalalineaYear {
+  font-family: 'Cairo';
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bolder;
+  color: black;
+  border-radius: 5px;
+  padding: 0rem 0.25rem;
+  cursor: pointer;
+  transition: .5s all ease-in-out;
+  text-decoration: none;
+  opacity: 80%;
+  transition: 0.5s all ease-in-out;
+
+}
+
+.todalalineaYear:hover {
+  opacity: 100%;
+  background-color: #191919;
+  color: white ;
+}
+
+
+.todalalineaLINEA {
+  height: 1rem;
+  width: 0.1rem;
+  background-color: #191919;
+  margin: 0;
+  opacity: 80%;
+  transition: 0.5s all ease-in-out;
+}
+
+
+ 
+  .todalalineaItemTittle {
+    font-family: 'Cairo';
+   margin: 2rem;
+   font-size: 2.2rem;
+   font-weight: bolder;
+   color: #191919;
+   border-radius: 5px;
+   line-height: 1.7rem;
+   cursor: pointer;
+   transition: .5s all ease-in-out;
+   border: none;
+   text-transform: uppercase;
+ }
+
+
+.grain {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  opacity: 10%;
 }
 
 /* MEDIA QUERY */

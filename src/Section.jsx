@@ -40,13 +40,14 @@ export default function Section({ img, siguiente, atras, tittle, text1, text2, t
             <div className={textsNone === true ? "textAndPicCont" : "textAndPicCont opacity100"}>
 
                 <div className={pic != null ? 'textscont w70' : "textscont"}>
-                <p className='modalTittle'>  {tittle} </p>
-                <a className={link1 != null ? 'parrafo w70 texthover' : "parrafo w70"} href={link1 != null ? link1 : undefined} target="_blank"> {text1} </a>
+                    <p className='modalTittle'>  {tittle} </p>
+                    
+                    <a className={link1 != null ? 'parrafo w70 texthover' : "parrafo w70"} href={link1 != null ? link1 : undefined} target="_blank"> {text1} </a>
 
-                <a className={link2 != null ? 'parrafo w70 texthover' : "parrafo w70"} href={link2 != null ? link2 : undefined} target="_blank"> {text2} </a>
+                    <a className={link2 != null ? 'parrafo w70 texthover' : "parrafo w70"} href={link2 != null ? link2 : undefined} target="_blank"> {text2} </a>
 
-                <a className={link3 != null ? 'parrafo w70 texthover' : "parrafo w70"} href={link3 != null ? link3 : undefined} target="_blank"> {text3} </a>
-            
+                    <a className={link3 != null ? 'parrafo w70 texthover' : "parrafo w70"} href={link3 != null ? link3 : undefined} target="_blank"> {text3} </a>
+
                 </div>
 
                 {pic != null ? <><img className='picStyle' src={pic} alt="" /> </> : <></>
@@ -56,11 +57,11 @@ export default function Section({ img, siguiente, atras, tittle, text1, text2, t
             </div>
 
 
-            { pic !== null  ? <> </> : <img className='logoEducPlacas' src="https://educacionymemoria.github.io/Prevencion-del-Maltrato-Infanto-Juvenil/images/logo-edym-fullblanco.png" alt="" />}
+            {pic !== null ? <> </> : <img className='logoEducPlacas' src="https://educacionymemoria.github.io/Prevencion-del-Maltrato-Infanto-Juvenil/images/logo-edym-fullblanco.png" alt="" />}
 
             <div className='gallery'>
                 <div class="line" style={{ "width": "0%" }} key={Math.random()}></div>
-                <img className='imgGallery' src={img} alt="" />
+                {/* <img className='imgGallery' src={img} alt="" /> */}
 
 
 
