@@ -312,6 +312,7 @@ z-index: 1000;
 }
 
 .textsCont{
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -319,6 +320,7 @@ z-index: 1000;
   background-color: rgb(59, 59, 59, 20%);
   border-radius: 15px;
   padding: 3rem;
+  
 }
 
 .columnaLineaTexts {
@@ -328,7 +330,7 @@ z-index: 1000;
   justify-content: center;
   width: 40vw;
   margin: 0 2rem;
-
+  position: relative;
   padding: 2rem;
 }
 
@@ -406,11 +408,12 @@ z-index: 1000;
 
 .lineaItemSubTittle {
   font-family: 'Open Sans';
+  
   position: absolute;
-  top: 18vh;
-  left: 47.2%;
-  margin: 1rem 0;
-  font-size: 1rem;
+  top: 19vh;
+  left: 48%;
+  margin: 0 auto;
+  font-size: 0.8rem;
   text-decoration: none;
   color: white;
   transition: 0.5s all ease-in-out;
@@ -434,10 +437,21 @@ z-index: 1000;
 }
 
 .lineImg {
-  width: 15vw;
-  border-radius: 50%;
+  width: 20vw;
+  border-radius: 10px;
   aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+.lineImgG {
+  width: 25vw;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.imgAligRight {
+object-position: right;
 }
 
 .lineainicio {
@@ -780,6 +794,14 @@ z-index: 1000;
 
 }
 
+.alignLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
 .todalalinea {
   position: fixed;
   left: 0;
@@ -787,6 +809,7 @@ z-index: 1000;
   width: 100%;
   height: 100vh;
   margin: 0;
+  padding: 0 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -799,24 +822,42 @@ z-index: 1000;
 
 
 .todalalineaYear {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   font-family: 'Cairo';
-  font-size: 1rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
   margin: 0;
   font-weight: bolder;
   color: black;
-  border-radius: 5px;
-  padding: 0rem 0.25rem;
+  padding: 0rem;
   cursor: pointer;
   transition: .5s all ease-in-out;
   text-decoration: none;
   opacity: 80%;
   transition: 0.5s all ease-in-out;
+  max-width: 10rem;
+  height: 6rem;
 
+}
+
+.todalalineaYearText {
+  margin: 0;
+  text-align: center;
+}
+
+.bggrey {
+  background-color: #191919;
+  color: white ;
+  width: 100%;
+ text-align: center;
 }
 
 .todalalineaYear:hover {
   opacity: 100%;
-  background-color: #191919;
+  background-color: #bcbcbc;
   color: white ;
 }
 
@@ -855,6 +896,212 @@ z-index: 1000;
   height: 100vh;
   margin: 0;
   opacity: 10%;
+}
+
+.creditosContR {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-family: 'Cairo';
+}
+
+.creditosContL {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: 'Cairo';
+}
+
+.button2 {
+  font-family: 'Cairo';
+  background: none;
+  color: white;
+border: none;
+margin: 0 0.25rem;
+padding: 0 0.15rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-image: linear-gradient(120deg, #fcfba1 0%, #a9f6c2 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 50%;
+  transition: all 0.25s ease-in;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #282c34;
+
+}
+
+.button2:hover {
+  background-size: 100% 100%;
+  color: grey;
+}
+
+.links {
+  font-family: 'Cairo';
+  color: white;
+margin: 0 0.25rem;
+  padding: 0 0.15rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  background: linear-gradient(120deg, #afa1fc 0%, #949af1 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  background-position: 0 50%;
+  transition: all 0.25s ease-in;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #282c34;
+
+}
+
+.links:hover {
+  color: white;
+}
+.creditos {
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-family: 'Cairo';
+  margin: 0;
+}
+
+.clickText {
+  font-family: 'Cairo';
+  font-size: 0.8rem;
+  font-weight: bolder;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -3rem;
+  right: -2rem;
+  background-image: linear-gradient(120deg, #fcfba1 0%, #a9f6c2 100%);
+  background-repeat: no-repeat;
+  background-size: 130% 110%;
+  background-position: 0 110%;
+  color: #000000;
+  padding: 0 0.5rem;
+  margin: 0 0.5rem 0 0;
+  opacity: 0.35;
+  transition: 0.5s all ease-in-out;
+}
+
+
+.clickText:hover {
+  opacity: 1;
+}
+
+.clickText2 {
+  font-family: 'Cairo';
+  font-size: 0.8rem;
+  font-weight: bolder;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -5rem;
+  right: -2rem;
+  background-image: linear-gradient(120deg, #afa1fc 0%, #949af1 100%);
+
+  color: #000000;
+  padding: 0 0.5rem;
+  margin: 0 0.5rem 0 0;
+  opacity: 0.35;
+  transition: 0.5s all ease-in-out;
+}
+
+
+
+.clickText2:hover {
+  opacity: 1;
+}
+
+.referencesCont {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: fit-content;
+}
+
+.popUp {
+  font-family: 'Open Sans';
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.5s all ease-in-out;
+  width: 50%;
+  height: fit-content;
+  position: absolute;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.755);
+  backdrop-filter: blur(10px);
+  color: black;
+  z-index: 2000;
+  border-radius: 5px;
+}
+
+.infoCompTittle {
+  width: fit-content;
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(219, 126, 126);
+  color: rgb(121, 26, 26);
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 0 5px 0 0;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+
+.closeModal:hover {
+  background-color: rgb(193, 86, 86);
+}
+
+.todalalineaRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  width: fit-content;
+  
+
+}
+
+.anioTodaLaLinea {
+  font-family: 'Cairo';
+  height: 6rem;
+  margin: 0rem;
+  font-size: 2rem;
+  width: fit-content;
+  font-weight: bolder;
+  color: white;
+  background-color: #282c34;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding:0rem 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: .5s all ease-in-out;
+
 }
 
 /* MEDIA QUERY */
